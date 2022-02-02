@@ -43,18 +43,22 @@ public class homeController {
 
         switch (list.get(0)){
             case "K":
-                q1(11,23);
+                q1(10,23);
                 break;
             case "L":
+                estado = "edoMex";
                 q1(0,23);
                 break;
             case "M":
+                estado = "edoMex";
                 q1(0,23);
                 break;
             case "N":
+                estado = "edoMex";
                 q1(0,23);
                 break;
             case "P":
+                estado = "edoMex";
                 q1(0,5);
                 break;
             case "T":
@@ -94,6 +98,7 @@ public class homeController {
     }
 
     public void q2(){
+
         for (int i=0; i<dicionario.length; i++){
             if (list.get(2).equals(dicionario[i])){
                 System.out.println("Pasando a q3");
@@ -102,19 +107,18 @@ public class homeController {
             }
         }
 
-//        if (list.get(2).equals("-")){
-//            q10();
-//        }
-        //LGA-001-A	-	PEZ-999-Z
-        list.clear();
+        if (list.get(2).equals("-")){
+            q10();
+        }
+
     }
 
     public void q3(){
+        tipo = "AUTOMOVIL";
         if (list.get(3).equals("-")){
             System.out.println("PASANDO A 4");
             q4q5q6();
         }
-        list.clear();
     }
 
     public void q4q5q6(){
@@ -135,13 +139,15 @@ public class homeController {
         }
 
         if (status && error){
+            System.out.println("pasando a 7");
             q7();
         }
 
     }
 
     public void q7(){
-        if (list.get(3).equals("-")){
+        if (list.get(7).equals("-")){
+            System.out.println("pasando a 8");
             q8();
         }
         //System.out.println("llegue a q7 xd xd xd");
@@ -149,7 +155,8 @@ public class homeController {
 
     public void q8(){
         for (int i=0; i<dicionario.length; i++){
-            if (list.get(2).equals(dicionario[i])){
+            if (list.get(8).equals(dicionario[i])){
+                System.out.println("pasando a 9");
                 q9Aceptacion();
                 i= dicionario.length;
             }
@@ -162,16 +169,12 @@ public class homeController {
         if (tipo.equals("CAMION")){
             if (list.get(0).equals("M")){
                 aceptacion = valid(0, 16);
-            }else {
-                aceptacion = false;
             }
         }
 
         if (tipo.equals("AUTOMOVIL")){
             if (list.get(0).equals("L")){
                 aceptacion = valid(6, 23);
-            }else {
-                aceptacion = false;
             }
         }
 
