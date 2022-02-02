@@ -27,7 +27,7 @@ public class Main extends Application {
             scene = new Scene(loadFXML("home"));
 
             primaryStage.setScene(scene);
-            primaryStage.setTitle("Login");
+            primaryStage.setTitle("INICIO");
             primaryStage.setResizable(false);
             primaryStage.show();
 

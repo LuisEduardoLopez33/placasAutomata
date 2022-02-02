@@ -185,7 +185,6 @@ public class homeController {
         boolean aux = false;
         for (int i=init; i<finish; i++){
             if (list.get(1).equals(dicionario[i])){
-                q2();
                 i=finish;
                  aux = true;
             }
