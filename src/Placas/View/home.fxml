@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Placas.Controller.homeController">
    <top>
       <AnchorPane prefHeight="66.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
@@ -22,9 +21,18 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="entradaUno" layoutX="52.0" layoutY="104.0" prefHeight="68.0" prefWidth="252.0" />
-            <TextField fx:id="entradaDos" layoutX="360.0" layoutY="104.0" prefHeight="68.0" prefWidth="252.0" />
-            <TextField fx:id="entradaTres" layoutX="664.0" layoutY="104.0" prefHeight="68.0" prefWidth="89.0" />
+            <TextField fx:id="entradaUno" layoutX="52.0" layoutY="104.0" prefHeight="68.0" prefWidth="252.0">
+               <font>
+                  <Font size="30.0" />
+               </font></TextField>
+            <TextField fx:id="entradaDos" layoutX="360.0" layoutY="104.0" prefHeight="68.0" prefWidth="252.0">
+               <font>
+                  <Font size="30.0" />
+               </font></TextField>
+            <TextField fx:id="entradaTres" layoutX="664.0" layoutY="104.0" prefHeight="68.0" prefWidth="89.0">
+               <font>
+                  <Font size="30.0" />
+               </font></TextField>
             <Label layoutX="320.0" layoutY="91.0" prefHeight="22.0" prefWidth="31.0" text="-" textAlignment="CENTER">
                <font>
                   <Font size="64.0" />
