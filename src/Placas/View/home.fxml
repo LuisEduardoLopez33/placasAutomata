@@ -3,36 +3,91 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Placas.Controller.homeController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Placas.Controller.homeController">
    <top>
-      <AnchorPane prefHeight="66.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="66.0" prefWidth="600.0" style="-fx-background-color: #BD3796;" BorderPane.alignment="CENTER">
+         <children>
+            <Ellipse fill="#0d0d0d40" layoutX="52.0" layoutY="22.0" radiusX="22.0" radiusY="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Ellipse fill="#0d0d0d40" layoutX="791.0" layoutY="22.0" radiusX="22.0" radiusY="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label layoutX="345.0" layoutY="15.0" text="Valida tu placa" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
    </top>
    <bottom>
-      <AnchorPane prefHeight="59.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="216.0" prefWidth="846.0" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="726.0" layoutY="17.0" mnemonicParsing="false" onMouseClicked="#butttonInicio" text="OK" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bd3796" height="67.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="846.0" />
+            <Ellipse fill="#0d0d0d40" layoutX="799.0" layoutY="186.0" radiusX="22.0" radiusY="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Button layoutX="638.0" layoutY="164.0" mnemonicParsing="false" onMouseClicked="#butttonInicio" prefHeight="26.0" prefWidth="113.0" style="-fx-background-radius: 14;" text="OK" />
+            <Label layoutX="88.0" layoutY="24.0" text="Resultados">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="88.0" layoutY="54.0" text="Estado:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="88.0" layoutY="88.0" text="Vehiculo:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="estadoLabel" layoutX="170.0" layoutY="54.0" prefHeight="20.0" prefWidth="160.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="tipoLabel" layoutX="170.0" layoutY="88.0" prefHeight="20.0" prefWidth="165.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorMensaje" layoutX="180.0" layoutY="124.0" text="ERROR" textFill="#c70000" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorLabel" layoutX="282.0" layoutY="125.0" prefHeight="20.0" prefWidth="431.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Ellipse fill="#0d0d0d40" layoutX="64.0" layoutY="186.0" radiusX="22.0" radiusY="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <ImageView fx:id="imgEscudo" fitHeight="58.0" fitWidth="90.0" layoutX="100.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </AnchorPane>
    </bottom>
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="entradaUno" layoutX="52.0" layoutY="104.0" prefHeight="68.0" prefWidth="252.0">
+            <TextField fx:id="entradaUno" layoutX="52.0" layoutY="104.0" prefHeight="68.0" prefWidth="252.0" style="-fx-border-color: #BD3796;">
                <font>
                   <Font size="30.0" />
-               </font></TextField>
-            <TextField fx:id="entradaDos" layoutX="360.0" layoutY="104.0" prefHeight="68.0" prefWidth="252.0">
+               </font>
+            </TextField>
+            <TextField fx:id="entradaDos" layoutX="360.0" layoutY="104.0" prefHeight="68.0" prefWidth="252.0" style="-fx-border-color: #BD3796;">
                <font>
                   <Font size="30.0" />
-               </font></TextField>
-            <TextField fx:id="entradaTres" layoutX="664.0" layoutY="104.0" prefHeight="68.0" prefWidth="89.0">
+               </font>
+            </TextField>
+            <TextField fx:id="entradaTres" layoutX="664.0" layoutY="104.0" prefHeight="68.0" prefWidth="89.0" style="-fx-border-color: #BD3796;">
                <font>
                   <Font size="30.0" />
-               </font></TextField>
+               </font>
+            </TextField>
             <Label layoutX="320.0" layoutY="91.0" prefHeight="22.0" prefWidth="31.0" text="-" textAlignment="CENTER">
                <font>
                   <Font size="64.0" />
@@ -41,6 +96,16 @@
             <Label layoutX="622.0" layoutY="91.0" prefHeight="22.0" prefWidth="31.0" text="-" textAlignment="CENTER">
                <font>
                   <Font size="64.0" />
+               </font>
+            </Label>
+            <Label fx:id="edoMex" layoutX="320.0" layoutY="14.0" text="Estado de México " visible="false">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="sanLuis" layoutX="338.0" layoutY="14.0" text="San Luis Potosi" visible="false">
+               <font>
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Label>
          </children>
