@@ -97,7 +97,7 @@ public class homeController implements Initializable {
                 break;
             case "U":
                 estado = "San Luis Potosi";
-                q1(20,23);
+                q1(19,23);
                 break;
             case "V":
                 estado = "San Luis Potosi";
