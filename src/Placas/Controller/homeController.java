@@ -72,33 +72,35 @@ public class homeController implements Initializable {
 
         switch (list.get(0)){
             case "K":
+                estado = "Estado de Mexico";
                 q1(10,23);
                 break;
             case "L":
-                estado = "edoMex";
+                estado = "Estado de Mexico";
                 q1(0,23);
                 break;
             case "M":
-                estado = "edoMex";
+                estado = "Estado de Mexico";
                 q1(0,23);
                 break;
             case "N":
-                estado = "edoMex";
+                estado = "Estado de Mexico";
                 q1(0,23);
                 break;
             case "P":
-                estado = "edoMex";
+                estado = "Estado de Mexico";
                 q1(0,5);
                 break;
             case "T":
+                estado = "San Luis Potosi";
                 q1(2,14);
                 break;
             case "U":
-                estado = "SP";
+                estado = "San Luis Potosi";
                 q1(20,23);
                 break;
             case "V":
-                estado = "SP";
+                estado = "San Luis Potosi";
                 q1(0,5);
                 break;
             default:
@@ -134,13 +136,19 @@ public class homeController implements Initializable {
 
     public void q2(){
         boolean error= true;
+
         for (int i=0; i<dicionario.length; i++){
-            if (list.get(2).equals(dicionario[i])){
-                System.out.println("Pasando a q3");
-                error= false;
-                q3();
-                i= dicionario.length;
+            if (list.get(0).equals("K") || list.get(0).equals("T")){
+                i = dicionario.length;
+            }else {
+                if (list.get(2).equals(dicionario[i])){
+                    System.out.println("Pasando a q3");
+                    error= false;
+                    q3();
+                    i= dicionario.length;
+                }
             }
+
         }
 
         if (list.get(2).equals("-")){
@@ -217,9 +225,11 @@ public class homeController implements Initializable {
         boolean error= true;
         for (int i=0; i<dicionario.length; i++){
             if (list.get(8).equals(dicionario[i])){
-                System.out.println("pasando a 9");
-                error= false;
-                q9Aceptacion();
+                if (list.size()==9){
+                    System.out.println("pasando a 9");
+                    error= false;
+                    q9Aceptacion();
+                }
                 i= dicionario.length;
             }
         }
@@ -251,7 +261,7 @@ public class homeController implements Initializable {
             System.out.println("Tipo de Veiculo: "+tipo);
             estadoLabel.setText(estado);
             tipoLabel.setText(tipo);
-            if(estado.equals("edoMex")){
+            if(estado.equals("Estado de Mexico")){
                 edoMex.setVisible(true);
             }else{
                 sanLuis.setVisible(true);
